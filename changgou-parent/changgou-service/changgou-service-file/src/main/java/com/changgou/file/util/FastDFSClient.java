@@ -1,17 +1,14 @@
-package com.changgou.util;
+package com.changgou.file.util;
 
-import org.apache.commons.lang.ArrayUtils;
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.InetSocketAddress;
 
 public class FastDFSClient {
 

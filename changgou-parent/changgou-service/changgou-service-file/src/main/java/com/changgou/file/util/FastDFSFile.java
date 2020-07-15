@@ -1,4 +1,4 @@
-package com.changgou.util;
+package com.changgou.file.util;
 
 import lombok.Data;
 
