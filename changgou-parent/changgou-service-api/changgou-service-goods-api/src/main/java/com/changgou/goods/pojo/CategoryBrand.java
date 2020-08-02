@@ -2,6 +2,7 @@ package com.changgou.goods.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
@@ -15,6 +16,7 @@ import java.io.Serializable;
  *****/
 @ApiModel(description = "CategoryBrand",value = "CategoryBrand")
 @Table(name="tb_category_brand")
+@Data
 public class CategoryBrand implements Serializable{
 
 	@ApiModelProperty(value = "分类ID",required = false)

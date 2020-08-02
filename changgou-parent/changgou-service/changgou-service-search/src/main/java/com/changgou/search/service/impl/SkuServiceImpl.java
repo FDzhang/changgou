@@ -25,6 +25,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.SearchResultMapper;
 import org.springframework.data.elasticsearch.core.aggregation.AggregatedPage;
 import org.springframework.data.elasticsearch.core.aggregation.impl.AggregatedPageImpl;
+import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -133,7 +134,7 @@ public class SkuServiceImpl implements SkuService {
 
         // 分页 不传分页参数，默认第一页
         Integer pageNum = converterPage(searchMap);
-        Integer size = 3;
+        Integer size = 50;
         nativeSearchQueryBuilder.withPageable(PageRequest.of(pageNum - 1, size));
 
         return nativeSearchQueryBuilder;
@@ -234,6 +235,15 @@ public class SkuServiceImpl implements SkuService {
         resultMap.put("rows", contents);
         resultMap.put("total", totalElements);
         resultMap.put("totalPages", totalPages);
+
+        NativeSearchQuery query = nativeSearchQueryBuilder.build();
+        Pageable pageable = query.getPageable();
+        int pageSize = pageable.getPageSize();
+        int pageNumber = pageable.getPageNumber();
+
+        resultMap.put("pageSize",pageSize);
+        resultMap.put("pageNumber",pageNumber);
+
         return resultMap;
     }
 

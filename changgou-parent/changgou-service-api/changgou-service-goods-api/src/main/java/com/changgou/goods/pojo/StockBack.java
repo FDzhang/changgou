@@ -2,6 +2,7 @@ package com.changgou.goods.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
@@ -16,6 +17,7 @@ import java.util.Date;
  *****/
 @ApiModel(description = "StockBack",value = "StockBack")
 @Table(name="tb_stock_back")
+@Data
 public class StockBack implements Serializable{
 
 	@ApiModelProperty(value = "订单id",required = false)

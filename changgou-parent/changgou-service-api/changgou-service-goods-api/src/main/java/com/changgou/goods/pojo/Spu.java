@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
@@ -17,6 +18,7 @@ import java.io.Serializable;
  *****/
 @ApiModel(description = "Spu",value = "Spu")
 @Table(name="tb_spu")
+@Data
 public class Spu implements Serializable{
 
 	@ApiModelProperty(value = "主键",required = false)

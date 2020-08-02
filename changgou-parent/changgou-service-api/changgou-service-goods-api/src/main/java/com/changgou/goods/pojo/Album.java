@@ -1,5 +1,7 @@
 package com.changgou.goods.pojo;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -9,6 +11,7 @@ import java.io.Serializable;
  * @Date 2019/6/14 19:13
  *****/
 @Table(name = "tb_album")
+@Data
 public class Album implements Serializable {
 
     @Id

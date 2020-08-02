@@ -2,6 +2,7 @@ package com.changgou.goods.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,6 +15,7 @@ import java.util.Date;
  *****/
 @ApiModel(description = "Pref",value = "Pref")
 @Table(name="tb_pref")
+@Data
 public class Pref implements Serializable{
 
 	@ApiModelProperty(value = "ID",required = false)

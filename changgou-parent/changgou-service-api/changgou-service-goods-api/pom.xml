@@ -19,5 +19,12 @@
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
+
+        <!--lombok 依赖-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 </project>
